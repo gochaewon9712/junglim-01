@@ -4,222 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About — Chaewon Go</title>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .about-wrap {
-            padding: 80px var(--page-margin) 0;
-            display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            gap: 80px;
-            align-items: start;
-        }
-
-        /* left: sticky photo */
-        .about-left {
-            position: sticky;
-            top: 80px;
-        }
-
-        .about-img-frame {
-            position: relative;
-        }
-
-        .about-img-frame::before {
-            content: '';
-            position: absolute;
-            top: 10px; left: 10px;
-            right: -10px; bottom: -10px;
-            border: 1px solid var(--rule);
-            z-index: 0;
-        }
-
-        .about-img {
-            width: 100%;
-            aspect-ratio: 3 / 4;
-            object-fit: cover;
-            filter: grayscale(100%);
-            display: block;
-            position: relative;
-            z-index: 1;
-            transition: filter 0.4s ease;
-        }
-
-        .about-img:hover { filter: grayscale(30%); }
-
-        .about-caption {
-            margin-top: 14px;
-            font-size: 10px;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            color: var(--ink-faint);
-        }
-
-        /* right: text */
-        .about-right { padding-top: 4px; }
-
-        .about-heading {
-            font-family: 'IM Fell English', serif;
-            font-size: clamp(36px, 4vw, 56px);
-            font-weight: 400;
-            line-height: 1.05;
-            margin-bottom: 36px;
-        }
-
-        .about-heading em { font-style: italic; color: var(--accent); }
-
-        .about-body {
-            color: var(--ink-mid);
-            font-size: 12px;
-            line-height: 2;
-            margin-bottom: 48px;
-        }
-
-        /* skills table */
-        .skills-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 48px;
-            font-size: 11px;
-        }
-
-        .skills-table tr {
-            border-bottom: 1px solid var(--rule);
-        }
-
-        .skills-table tr:first-child {
-            border-top: 1px solid var(--rule);
-        }
-
-        .skills-table td {
-            padding: 14px 0;
-            vertical-align: top;
-        }
-
-        .skills-table td:first-child {
-            color: var(--ink-faint);
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            font-size: 10px;
-            width: 40%;
-            padding-right: 20px;
-        }
-
-        .skills-table td:last-child {
-            color: var(--ink-mid);
-            letter-spacing: 0.06em;
-        }
-
-        .about-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 11px;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            color: var(--ink);
-            text-decoration: none;
-            border: 1px solid var(--ink);
-            padding: 12px 24px;
-            transition: background 0.25s, color 0.25s;
-        }
-
-        .about-cta:hover { background: var(--ink); color: var(--cream); }
-
-        @media (max-width: 768px) {
-            .about-wrap { grid-template-columns: 1fr; gap: 40px; }
-            .about-left { position: static; }
-        }
-    </style>
 </head>
 <body>
 
     <nav>
-        <ul class="nav-links-left">
-            <li><a href="about.html" class="active">about</a></li>
-            <li><a href="index.html#works">works</a></li>
-        </ul>
         <a href="index.html" class="nav-logo">chaewon go</a>
-        <ul class="nav-links-right">
+        <ul class="nav-links">
+            <li><a href="about.html" class="active">about</a></li>
+            <li><a href="index.html">works</a></li>
             <li><a href="contact.html">contact</a></li>
         </ul>
     </nav>
 
-    <div class="page-wrap">
+    <main>
         <div class="about-wrap">
 
-            <div class="about-left reveal">
-                <div class="about-img-frame">
-                    <img class="about-img"
-                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80"
-                        alt="Chaewon Go portrait">
-                </div>
-                <p class="about-caption">고채원 / Chaewon Go</p>
-            </div>
+            <img class="about-photo"
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80"
+                alt="Chaewon Go">
 
-            <div class="about-right">
-                <h1 class="about-heading reveal">
-                    Architecture<br>as <em>inquiry</em>.
-                </h1>
+            <div class="about-text">
+                <h1>architecture<br>as inquiry.</h1>
 
-                <p class="about-body reveal">
-                    현재 경희대학교 국제캠퍼스 건축학과 재학 중입니다.<br><br>
-                    공간이 사람의 삶에 미치는 영향에 깊은 관심을 가지고 있으며, 도시 문제 해결과 지속 가능한 디자인에 대해 끊임없이 고민합니다.<br><br>
-                    다양한 스튜디오 프로젝트와 공모전을 통해 기획부터 모델링, 렌더링까지 설계의 전 과정을 주도적으로 수행해왔습니다. 졸업 후 실무에서 더 넓은 세상을 그리며 성장하는 건축가가 되고 싶습니다.
+                <p>
+                    현재 경희대학교 국제캠퍼스 건축학과 재학 중입니다.
+                </p>
+                <p>
+                    공간이 사람의 삶에 미치는 영향에 깊은 관심을 가지고 있으며, 도시 문제 해결과 지속 가능한 디자인에 대해 끊임없이 고민합니다.
+                </p>
+                <p>
+                    다양한 스튜디오 프로젝트와 공모전을 통해 기획부터 모델링, 렌더링까지 설계의 전 과정을 주도적으로 수행해왔습니다.
                 </p>
 
-                <table class="skills-table reveal">
-                    <tr>
-                        <td>3D Modeling</td>
-                        <td>Rhino · SketchUp</td>
-                    </tr>
-                    <tr>
-                        <td>Rendering</td>
-                        <td>V-Ray · Enscape</td>
-                    </tr>
-                    <tr>
-                        <td>CAD / BIM</td>
-                        <td>AutoCAD · Revit</td>
-                    </tr>
-                    <tr>
-                        <td>Parametric</td>
-                        <td>Grasshopper</td>
-                    </tr>
-                    <tr>
-                        <td>Model Making</td>
-                        <td>Physical Prototype</td>
-                    </tr>
-                    <tr>
-                        <td>University</td>
-                        <td>경희대학교 국제캠퍼스 건축학과</td>
-                    </tr>
+                <table class="about-table">
+                    <tr><td>3D modeling</td><td>Rhino, SketchUp</td></tr>
+                    <tr><td>rendering</td><td>V-Ray, Enscape</td></tr>
+                    <tr><td>CAD / BIM</td><td>AutoCAD, Revit</td></tr>
+                    <tr><td>parametric</td><td>Grasshopper</td></tr>
+                    <tr><td>model making</td><td>physical prototype</td></tr>
+                    <tr><td>university</td><td>경희대학교 국제캠퍼스 건축학과</td></tr>
                 </table>
 
-                <a href="#" class="about-cta reveal">Download CV →</a>
+                <a href="#" class="about-cta">download cv</a>
             </div>
 
         </div>
+    </main>
 
-        <footer>
-            <span class="footer-copy">© 2026 Chaewon Go</span>
-            <div class="footer-socials">
-                <a href="#">instagram</a>
-                <a href="#">behance</a>
-                <a href="#">linkedin</a>
-            </div>
-        </footer>
-    </div>
+    <footer>© 2026 chaewon go</footer>
 
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry, i) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => entry.target.classList.add('visible'), i * 80);
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.08 });
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-    </script>
 </body>
 </html>
