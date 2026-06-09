@@ -36,7 +36,6 @@ nav {
     letter-spacing: 0.12em;
     text-decoration: none;
     color: var(--ink);
-    text-transform: lowercase;
 }
 
 .nav-links {
